@@ -1,0 +1,710 @@
+<robot name="l_hand_mine">
+    <link name="base_link"/>
+  <link name="l_hand_base_link">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.016 -0.0625 0" rpy="1.5708 0 1.5708"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_palm.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.016 -0.0625 0" rpy="1.5708 0 1.5708"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_palm.dae"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="-0.0018 -0.027 -0.00375" rpy="-1.4749 -0.072507 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_indexbase.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0018 -0.027 -0.00375" rpy="-1.4749 -0.072507 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_indexbase.dae"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin rpy="0.0959 0.017493 -1.57079" xyz="0.01225 -0.075498 -0.027259"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail0.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0.0959 0.017493 -1.57079" xyz="0.01225 -0.075498 -0.027259"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ail0.dae"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.011 -0.0653 -0.01" rpy="-1.5708 7e-06 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_middlebase.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.011 -0.0653 -0.01" rpy="-1.5708 7e-06 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_middlebase.dae"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.011 -0.0803 -0.01" rpy="-0 7e-06 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ml0.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.011 -0.0803 -0.01" rpy="-0 7e-06 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ml0.dae"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.01175 -0.06415 0.0059" rpy="-1.6581 -0.008693 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ringbase.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.01175 -0.06415 0.0059" rpy="-1.6581 -0.008693 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ringbase.dae"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.01175 -0.078949 0.006029" rpy="-0.0873 -0.008693 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ril0.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.01175 -0.078949 0.006029" rpy="-0.0873 -0.008693 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ril0.dae"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.0135 -0.077048 0.025009" rpy="-0.0873 -0.017493 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_lil0.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0135 -0.077048 0.025009" rpy="-0.0873 -0.017493 -1.57079"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_lil0.dae"/>
+      </geometry>
+    </collision>
+
+
+  </link>
+
+  <joint name="base_fixed_joint" type="fixed">
+    <origin xyz="0 0 1" rpy="0 -0 0"/>
+    <axis xyz="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="l_hand_base_link"/>
+  </joint>
+
+  <link name="l_tl0">
+    <inertial>
+      <mass value="0.010"/>
+      <origin xyz="0.021 -0.0386 -0.01235" rpy="-3.063 1.07329 -1.5708"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_tl0.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_tl0.dae"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.021 0 -0.0056" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_tl1.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.021 0 -0.0056" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_tl1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_tj2" type="revolute">
+    <origin xyz="0.021 -0.0386 -0.01235" rpy="-3.063 1.07329 1.5708"/>
+    <parent link="l_hand_base_link"/>
+    <child link="l_tl0"/>
+    <axis xyz="-0.078511 -0.876064 0.47576"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_tl2">
+    <origin xyz="0.026583 -0.049008 -0.030595" rpy="1.64938 1.07329 -1.5708"/>
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.026 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_tl2.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.026 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_tl2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_tj4" type="revolute">
+    <origin xyz="0.021 0 -0.0056" rpy="0 0 0"/>
+    <parent link="l_tl0"/>
+    <child link="l_tl2"/>
+    <axis xyz="-0.996914 0.068991 -0.037465"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_tl3">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.022 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_tl3.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.022 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_tl3.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_tj5" type="revolute">
+    <origin xyz="0.026 0 0" rpy="0 0 0"/>
+    <parent link="l_tl2"/>
+    <child link="l_tl3"/>
+    <axis xyz="-0.996914 0.068991 -0.037465"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_tl4">
+    <inertial>
+      <mass value="0.010"/>
+      <origin xyz="0.026583 -0.071915 -0.072776" rpy="1.64938 1.07329 -1.5708"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_tl4.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_tl4.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_tj6" type="revolute">
+    <origin xyz="0.022 0 0" rpy="0 0 0"/>
+    <parent link="l_tl3"/>
+    <child link="l_tl4"/>
+    <axis xyz="-0.996914 0.068991 -0.037465"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ai_dummy">
+    <origin xyz="0.01225 -0.0643 -0.027" rpy="-1.4749 -0.072507 -1.57079"/>
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+  </link>
+
+  <joint name="l_aij6" type="revolute">
+    <origin xyz="0.01225 -0.0643 -0.027" rpy="-1.4749 -0.072507 -1.57079"/>
+    <parent link="l_hand_base_link"/>
+    <child link="l_ai_dummy"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ail1">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0259 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail1.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0259 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ail1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_aij3" type="revolute">
+    <origin rpy="1.5708 0 0" xyz="0.012 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="l_ai_dummy"/>
+    <child link="l_ail1"/>
+    <axis xyz="-0.095753 -0.017412 0.995253"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ail2">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.022 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail2.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.022 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ail2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_aij4" type="revolute">
+    <origin xyz="0.0259 0 0" rpy="0 0 0"/>
+    <parent link="l_ail1"/>
+    <child link="l_ail2"/>
+    <axis xyz="-0.095753 -0.017412 0.995253"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ail3">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0168 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail3.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0168 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ail3.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_aij5" type="revolute">
+    <origin xyz="0.022 0 0" rpy="0 0 0"/>
+    <parent link="l_ail2"/>
+    <child link="l_ail3"/>
+    <axis xyz="-0.095753 -0.017412 0.995253"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ml_dummy">
+    <origin xyz="0.011 -0.0653 -0.01" rpy="-1.5708 7e-06 -1.57079"/>
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+  </link>
+
+  <joint name="l_mj6" type="revolute">
+    <origin xyz="0.011 -0.0653 -0.01" rpy="-1.5708 7e-06 -1.57079"/>
+    <parent link="l_hand_base_link"/>
+    <child link="l_ml_dummy"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ml1">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0285 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ml1.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0285 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ml1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_mj3" type="revolute">
+    <origin rpy="1.5708 0 0" xyz="0.015 0 0"/>
+    <parent link="l_ml_dummy"/>
+    <child link="l_ml1"/>
+    <axis xyz="0 -7e-06 1"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ml2">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.024 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ml2.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.024 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ml2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_mj4" type="revolute">
+    <origin xyz="0.0285 0 0" rpy="0 0 0"/>
+    <parent link="l_ml1"/>
+    <child link="l_ml2"/>
+    <axis xyz="0 -7e-06 1"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ml3">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0168 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ml3.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0168 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ml3.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_mj5" type="revolute">
+    <origin xyz="0.0240 0 0" rpy="1.5708 0 0"/>
+    <parent link="l_ml2"/>
+    <child link="l_ml3"/>
+    <axis xyz="0 -7e-06 1"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ril_dummy">
+    <origin xyz="0.01175 -0.06415 0.0059" rpy="-1.6581 -0.008693 -1.57079"/>
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+  </link>
+
+  <joint name="l_rij6" type="revolute">
+    <origin xyz="0.01175 -0.06415 0.0059" rpy="-1.6581 -0.008693 -1.57079"/>
+    <parent link="l_hand_base_link"/>
+    <child link="l_ril_dummy"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ril1">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0259 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ril1.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0259 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ril1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_rij3" type="revolute">
+    <origin xyz="0.0148 0 0" rpy="1.5708 0 0"/>
+    <parent link="l_ril_dummy"/>
+    <child link="l_ril1"/>
+    <axis xyz="0.087189 0.00866 0.996154"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ril2">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.022 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ril2.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.022 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ril2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_rij4" type="revolute">
+    <origin xyz="0.0259 0 0" rpy="0 0 0"/>
+    <parent link="l_ril1"/>
+    <child link="l_ril2"/>
+    <axis xyz="0.087189 0.00866 0.996154"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_ril3">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ril3.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ril3.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_rij5" type="revolute">
+    <origin xyz="0.022 0 0" rpy="1.5708 0 0"/>
+    <parent link="l_ril2"/>
+    <child link="l_ril3"/>
+    <axis xyz="0.087189 0.00866 0.996154"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_li_dummy">
+    <origin xyz="0.0135 -0.06225 0.02475" rpy="-1.6581 -0.017493 -1.57079"/>
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+  </link>
+
+  <joint name="l_lij6" type="revolute">
+    <origin xyz="0.0135 -0.06225 0.02475" rpy="-1.6581 -0.017493 -1.57079"/>
+    <parent link="l_hand_base_link"/>
+    <child link="l_li_dummy"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
+  </joint>
+
+  <link name="l_lil1">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0218 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_lil1.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0218 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_lil1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_lij3" type="revolute">
+    <origin rpy="1.5708 0 0" xyz="0.0148 0 0"/>
+    <parent link="l_li_dummy"/>
+    <child link="l_lil1"/>
+    <axis xyz="0.087189 0.017426 0.996039"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_lil2">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.019 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_lil2.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.019 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_lil2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_lij4" type="revolute">
+    <origin rpy="0 0 0" xyz="0.0218 0 0"/>
+    <parent link="l_lil1"/>
+    <child link="l_lil2"/>
+    <axis xyz="0.087189 0.017426 0.996039"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+  <link name="l_lil3">
+    <inertial>
+      <mass value="0.010"/>
+      <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_lil3.dae"/>
+        <material>
+          <color rgba="0 0 0 1"/>
+        </material>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_lil3.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="l_lij5" type="revolute">
+    <origin xyz="0.019 0 0" rpy="1.5708 0 0"/>
+    <parent link="l_lil2"/>
+    <child link="l_lil3"/>
+    <axis xyz="0.087189 0.017426 0.996039"/>
+    <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
+  </joint>
+
+</robot>

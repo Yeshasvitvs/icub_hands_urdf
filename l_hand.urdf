@@ -22,7 +22,7 @@
   </collision>
 
   <visual>
-    <origin xyz="0.01225 -0.0643 -0.027" rpy="-1.4749 -0.072507 -1.57079"/>
+    <origin xyz="-0.0018 -0.027 -0.00375" rpy="-1.4749 -0.072507 -1.57079"/>
     <geometry>
       <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_indexbase.dae"/>
       <material>
@@ -31,14 +31,14 @@
     </geometry>
   </visual>
   <collision>
-    <origin xyz="0.01225 -0.0643 -0.027" rpy="-1.4749 -0.072507 -1.57079"/>
+    <origin xyz="-0.0018 -0.027 -0.00375" rpy="-1.4749 -0.072507 -1.57079"/>
     <geometry>
       <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_indexbase.dae"/>
     </geometry>
   </collision>
 
   <visual>
-    <origin xyz="0.01225 -0.075498 -0.027259" rpy="0.0959 0.017493 -1.57079"/>
+    <origin rpy="0.0959 0.017493 -1.57079" xyz="0.01225 -0.075498 -0.027259"/>
     <geometry>
       <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail0.dae"/>
       <material>
@@ -47,7 +47,7 @@
     </geometry>
   </visual>
   <collision>
-    <origin xyz="0.01225 -0.0643 -0.027" rpy="0.0959 0.017493 -1.57079"/>
+    <origin rpy="0.0959 0.017493 -1.57079" xyz="0.01225 -0.075498 -0.027259"/>
     <geometry>
       <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ail0.dae"/>
     </geometry>
@@ -69,7 +69,7 @@
     </geometry>
   </collision>
 
-  <visual>
+  <!--visual>
     <origin xyz="0.0135 -0.077048 0.025009" rpy="-0.0873 -0.017493 -1.57079"/>
     <geometry>
       <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_lil0.dae"/>
@@ -147,7 +147,7 @@
     <geometry>
       <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ril0.dae"/>
     </geometry>
-  </collision>
+  </collision-->
 </link>
 
 <joint name="base_fixed_joint" type="fixed">
@@ -158,6 +158,7 @@
 </joint>
 
 <link name="l_ai_dummy">
+  <origin xyz="0.01225 -0.0643 -0.027" rpy="-1.4749 -0.072507 -1.57079"/>
   <inertial>
     <mass value="0.010"/>
     <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
@@ -165,7 +166,7 @@
 </link>
 
 <joint name="l_aij6" type="revolute">
-  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <origin xyz="0.01225 -0.0643 -0.027" rpy="-1.4749 -0.072507 -1.57079"/>
   <parent link="l_hand_base_link"/>
   <child link="l_ai_dummy"/>
   <axis xyz="-1 0 0"/>
@@ -195,7 +196,7 @@
 </link>
 
 <joint name="l_aij3" type="revolute">
-  <origin xyz="0.01225 -0.075498 -0.027259" rpy="0.0959 0.017493 -1.57079"/>
+  <origin rpy="1.5708 0 0" xyz="0.012 0 0"/>
   <origin xyz="0 0 0" rpy="0 0 0"/>
   <parent link="l_ai_dummy"/>
   <child link="l_ail1"/>
@@ -206,7 +207,6 @@
 <link name="l_ail2">
   <inertial>
     <mass value="0.010"/>
-    <origin xyz="0.01225 -0.101394 -0.027712" rpy="0.0959 0.017493 -1.57079"/>
     <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
   </inertial>
   <visual>
@@ -227,7 +227,7 @@
 </link>
 
 <joint name="l_aij4" type="revolute">
-  <origin xyz="0.03 0 0" rpy="0 0 0"/>
+  <origin xyz="0.0259 0 0" rpy="0 0 0"/>
   <parent link="l_ail1"/>
   <child link="l_ail2"/>
   <axis xyz="-0.095753 -0.017412 0.995253"/>
@@ -237,11 +237,10 @@
 <link name="l_ail3">
   <inertial>
     <mass value="0.010"/>
-    <origin xyz="0.01225 -0.12339 -0.028097" rpy="0.0959 0.017493 -1.57079"/>
     <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
   </inertial>
   <visual>
-    <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+    <origin xyz="0.0168 0 0" rpy="-1.5708 0 0"/>
     <geometry>
       <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail3.dae"/>
       <material>
@@ -250,7 +249,7 @@
     </geometry>
   </visual>
   <collision>
-    <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+    <origin xyz="0.0168 0 0" rpy="-1.5708 0 0"/>
     <geometry>
       <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ail3.dae"/>
     </geometry>
@@ -258,7 +257,7 @@
 </link>
 
 <joint name="l_aij5" type="revolute">
-  <origin xyz="0.03 0 0" rpy="0 0 0"/>
+  <origin xyz="0.022 0 0" rpy="0 0 0"/>
   <parent link="l_ail2"/>
   <child link="l_ail3"/>
   <axis xyz="-0.095753 -0.017412 0.995253"/>
@@ -266,9 +265,9 @@
 </joint>
 
 <link name="l_li_dummy">
+  <origin xyz="0.0135 -0.06225 0.02475" rpy="-1.6581 -0.017493 -1.57079"/>
   <inertial>
     <mass value="0.010"/>
-    <origin xyz="0.0135 -0.06225 0.02475" rpy="-1.6581 -0.017493 -1.57079"/>
     <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
   </inertial>
 </link>
@@ -305,17 +304,16 @@
 </link>
 
 <joint name="l_lij3" type="revolute">
-  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <origin rpy="1.5708 0 0" xyz="0.0148 0 0"/>
   <parent link="l_li_dummy"/>
   <child link="l_lil1"/>
   <axis xyz="0.087189 0.017426 0.996039"/>
   <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
 </joint>
 
-<!--link name="l_lil2">
+<link name="l_lil2">
   <inertial>
     <mass value="0.010"/>
-    <origin xyz="0.013501 -0.098844 0.02539" rpy="-0.0873 -0.017493 -1.57079"/>
     <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
   </inertial>
   <visual>
@@ -336,14 +334,14 @@
 </link>
 
 <joint name="l_lij4" type="revolute">
-  <origin xyz="0.013501 -0.098844 0.02539" rpy="-0.0873 -0.017493 -1.57079"/>
+  <origin rpy="1.5708 0 0" xyz="0.0148 0 0"/>
   <parent link="l_lil1"/>
   <child link="l_lil2"/>
   <axis xyz="0.087189 0.017426 0.996039"/>
   <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
 </joint>
 
-<link name="l_lil3">
+<!--link name="l_lil3">
   <inertial>
     <mass value="0.010"/>
     <origin xyz="0.013501 -0.117841 0.025723" rpy="-0.0873 -0.017493 -1.57079"/>

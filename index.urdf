@@ -1,0 +1,97 @@
+<link name="left_palm">
+
+     <visual>
+     <origin rpy="0 0 0" xyz="-0.0625 0 0.016"/>
+        <geometry>
+     <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_palm.dae"/>
+        </geometry>
+     </visual>
+  </link>
+
+  <link name="lindexbase">
+
+     <visual>
+     <origin rpy="0.0959 0 -3.2141" xyz="-0.0018 -0.027 -0.00375"/>
+        <geometry>
+     <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_indexbase.dae"/>
+        </geometry>
+     </visual>
+  </link>
+
+  <joint name="laij1" type="fixed">
+     <parent link="left_palm"/>
+     <child link="lindexbase"/>
+     <origin rpy="0 0 0" xyz="-0.0625 0 0.016"/>
+  </joint>
+
+  <link name="lail0">
+
+     <visual>
+     <origin rpy="1.5708 0 0" xyz="0.0148 0 0"/>
+        <geometry>
+     <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail0.dae"/>
+        </geometry>
+     </visual>
+  </link>
+
+  <joint name="laij2" type="fixed">
+     <parent link="lindexbase"/>
+     <child link="lail0"/>
+     <origin rpy="0.0959 0 -3.1241" xyz="0.0018 -0.027 -0.00375"/>
+  </joint>
+
+  <link name="lail1">
+
+     <visual>
+     <origin rpy="0 0 0" xyz="0.0259 0 0"/>
+        <geometry>
+     <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail1.dae"/>
+        </geometry>
+     </visual>
+  </link>
+
+
+    <joint name="laij3" type="revolute">
+       <axis xyz="0 0 1"/>
+       <limit effort="1000.0" lower="0" upper="1.5708" velocity="0.5"/>
+       <parent link="lail0"/>
+       <child link="lail1"/>
+       <origin rpy="1.5708 0 0" xyz="0.0148 0 0"/>
+    </joint>
+
+
+  <link name="lail2">
+
+     <visual>
+     <origin rpy="0 0 0" xyz="0.022 0 0"/>
+        <geometry>
+     <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail2.dae"/>
+        </geometry>
+     </visual>
+  </link>
+
+  <joint name="laij4" type="revolute">
+     <axis xyz="0 0 1"/>
+     <limit effort="1000.0" lower="0" upper="1.5708" velocity="0.5"/>
+     <parent link="lail1"/>
+     <child link="lail2"/>
+     <origin rpy="0 0 0" xyz="0.0259 0 0"/>
+  </joint>
+
+  <link name="lail3">
+
+     <visual>
+     <origin rpy="-1.5708 0 0" xyz="0.0168 0 0"/>
+        <geometry>
+     <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ail3.dae"/>
+        </geometry>
+     </visual>
+  </link>
+
+  <joint name="laij5" type="revolute">
+     <axis xyz="0 0 1"/>
+     <limit effort="1000.0" lower="0" upper="1.5708" velocity="0.5"/>
+     <parent link="lail2"/>
+     <child link="lail3"/>
+     <origin rpy="0 0 0" xyz="0.022 0 0"/>
+  </joint>
