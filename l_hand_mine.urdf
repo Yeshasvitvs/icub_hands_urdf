@@ -603,7 +603,7 @@
       <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
     </inertial>
     <visual>
-      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <origin xyz="0.0168 0 0" rpy="1.57079 0 0"/>
       <geometry>
         <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_ril3.dae"/>
         <material>
@@ -612,7 +612,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <origin xyz="0.0168 0 0" rpy="1.57079 0 0"/>
       <geometry>
         <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_ril3.dae"/>
       </geometry>
@@ -706,13 +706,13 @@
   </joint>
 
   <link name="l_lil3">
-    <origin xyz="0.013501 -0.117841 0.025723" rpy="-0.0873 -0.017493 -1.57079"/>
+    <origin xyz="0.013501 -0.117841 0.025723" rpy="-0.0873 1.57079 -1.57079"/>
     <inertial>
       <mass value="0.010"/>
       <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
     </inertial>
     <visual>
-      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <origin xyz="0.0168 0 0" rpy="1.5708 0 0"/>
       <geometry>
         <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/l_hand/l_lil3.dae"/>
         <material>
@@ -721,7 +721,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.0168 0 0" rpy="0 0 0"/>
+      <origin xyz="0.0168 0 0" rpy="1.5708 0 0"/>
       <geometry>
         <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/l_hand/l_lil3.dae"/>
       </geometry>
