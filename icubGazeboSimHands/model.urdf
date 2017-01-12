@@ -801,7 +801,7 @@
     </link>
 
     <joint name="l_rij5" type="revolute">
-      <origin xyz="0.0242 0 0.0045" rpy="1.5708 0 0"/>
+      <origin xyz="0.0242 0 0.0045" rpy="0 0 0"/>
       <parent link="l_ril2"/>
       <child link="l_ril3"/>
       <axis xyz="0.087189 0.00866 0.996154"/>
@@ -910,7 +910,7 @@
     </link>
 
     <joint name="l_lij5" type="revolute">
-      <origin xyz="0.02 0 -0.00385" rpy="1.5708 0 0"/>
+      <origin xyz="0.02 0 -0.00385" rpy="0 0 0"/>
       <parent link="l_lil2"/>
       <child link="l_lil3"/>
       <axis xyz="0.087189 0.017426 0.996039"/>
