@@ -1,5 +1,14 @@
 <robot name="both_hands">
+
   <link name="base_link"/>
+
+  <link name="l_hand_dh_frame">
+      <inertial>
+          <mass value="0" />
+          <origin xyz="0 0 0" rpy="0 -0 0" />
+          <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+      </inertial>
+  </link>
 
   <link name="l_hand">
     <origin xyz="0.016 -0.0625 0" rpy="1.5708 0 1.5708"/>
@@ -159,6 +168,13 @@
     <axis xyz="0 0 0"/>
     <parent link="base_link"/>
     <child link="l_hand"/>
+  </joint>
+
+  <joint name="l_hand_dh_frame_fixed_joint" type="fixed">
+      <origin xyz="0 -0.04 0" rpy="0 -0 0" />
+      <axis xyz="0 0 0" />
+      <parent link="l_hand" />
+      <child link="l_hand_dh_frame" />
   </joint>
 
   <link name="l_tl0">
@@ -737,6 +753,14 @@
     <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
   </joint>
 
+  <link name="r_hand_dh_frame">
+      <inertial>
+          <mass value="0" />
+          <origin xyz="0 0 0" rpy="0 -0 0" />
+          <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+      </inertial>
+  </link>
+
   <link name="r_hand">
     <origin xyz="0.016 -0.0625 0" rpy="1.5708 0 1.5708"/>
     <inertial>
@@ -895,6 +919,13 @@
     <axis xyz="0 0 0"/>
     <parent link="base_link"/>
     <child link="r_hand"/>
+  </joint>
+
+  <joint name="r_hand_dh_frame_fixed_joint" type="fixed">
+      <origin xyz="0 -0.04 0" rpy="0 -0 0" />
+      <axis xyz="0 0 0" />
+      <parent link="r_hand" />
+      <child link="r_hand_dh_frame" />
   </joint>
 
   <link name="r_tl0">
