@@ -1,6 +1,6 @@
 <robot name="r_hand_mine">
     <link name="base_link"/>
-  <link name="r_hand_base_link">
+  <link name="r_hand">
     <origin xyz="0.016 -0.0625 0" rpy="1.5708 0 1.5708"/>
     <inertial>
       <mass value="0.010"/>
@@ -157,7 +157,7 @@
     <origin xyz="0 0 1" rpy="0 -0 0"/>
     <axis xyz="0 0 0"/>
     <parent link="base_link"/>
-    <child link="r_hand_base_link"/>
+    <child link="r_hand"/>
   </joint>
 
   <link name="r_tl0">
@@ -201,7 +201,7 @@
 
   <joint name="r_tj2" type="revolute">
     <origin xyz="0.021 -0.0386 0.01235" rpy="-0.078604 -1.07329 -1.57079"/>
-    <parent link="r_hand_base_link"/>
+    <parent link="r_hand"/>
     <child link="r_tl0"/>
     <axis xyz="0.078514 0.876064 0.47576"/>
     <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
@@ -310,7 +310,7 @@
 
   <joint name="r_aij6" type="revolute">
     <origin xyz="0.01225 -0.0643 0.027" rpy="-1.6667 0.017507 -1.57079"/>
-    <parent link="r_hand_base_link"/>
+    <parent link="r_hand"/>
     <child link="r_ai_dummy"/>
     <axis xyz="1 0 0"/>
     <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -419,7 +419,7 @@
 
   <joint name="r_mj6" type="revolute">
     <origin xyz="0.011 -0.0653 0.01" rpy="-1.5708 7e-06 -1.57079"/>
-    <parent link="r_hand_base_link"/>
+    <parent link="r_hand"/>
     <child link="r_m_dummy"/>
     <axis xyz="1 0 0"/>
     <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -528,7 +528,7 @@
 
   <joint name="r_rij6" type="revolute">
     <origin xyz="0.01175 -0.06415 -0.0059" rpy="-1.4835 0.008707 -1.57079"/>
-    <parent link="r_hand_base_link"/>
+    <parent link="r_hand"/>
     <child link="r_rir_dummy"/>
     <axis xyz="1 0 0"/>
     <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -637,7 +637,7 @@
 
   <joint name="r_lij6" type="revolute">
     <origin xyz="0.0135 -0.06225 -0.02475" rpy="-1.4835 0.017507 -1.57079"/>
-    <parent link="r_hand_base_link"/>
+    <parent link="r_hand"/>
     <child link="r_li_dummy"/>
     <axis xyz="1 0 0"/>
     <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
