@@ -23,7 +23,7 @@
     </collision>
 
     <visual>
-      <origin xyz="0.01225 -0.0643 0.027" rpy="-1.4749 0.017507 -1.57079"/>
+      <origin xyz="0.01225 -0.0643 0.027" rpy="1.4749 0.017507 -1.57079"/>
       <geometry>
         <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/r_hand/r_indexbase.dae"/>
         <material>
@@ -32,14 +32,14 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.01225 -0.0643 0.027" rpy="-1.4749 0.017507 -1.57079"/>
+      <origin xyz="0.01225 -0.0643 0.027" rpy="1.4749 0.017507 -1.57079"/>
       <geometry>
         <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/r_hand/r_indexbase.dae"/>
       </geometry>
     </collision>
 
     <visual>
-      <origin xyz="0.01225 -0.079098 0.026741" rpy="0.0959 0.017507 -1.57079"/>
+      <origin xyz="0.01225 -0.079098 0.026741" rpy="-0.0959 0.017507 -1.57079"/>
       <geometry>
         <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/visual/r_hand/r_ail0.dae"/>
         <material>
@@ -48,7 +48,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.01225 -0.079098 0.026741" rpy="0.0959 0.017507 -1.57079"/>
+      <origin xyz="0.01225 -0.079098 0.026741" rpy="-0.0959 0.017507 -1.57079"/>
       <geometry>
         <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/r_hand/r_ail0.dae"/>
       </geometry>
@@ -301,7 +301,7 @@
   </joint>
 
   <link name="r_ai_dummy">
-    <origin xyz="0.01225 -0.0643 0.027" rpy="-1.4749 0.017507 -1.57079"/>
+    <origin xyz="0.01225 -0.0643 0.027" rpy="-1.6667 0.017507 -1.57079"/>
     <inertial>
       <mass value="0.010"/>
       <inertia ixx="0.0000112" ixy="0" ixz="0" iyy="0.0000112" iyz="0" izz="0.0000112"/>
@@ -309,7 +309,7 @@
   </link>
 
   <joint name="r_aij6" type="revolute">
-    <origin xyz="0.01225 -0.0643 0.027" rpy="-1.4749 0.017507 -1.57079"/>
+    <origin xyz="0.01225 -0.0643 0.027" rpy="-1.6667 0.017507 -1.57079"/>
     <parent link="r_hand_base_link"/>
     <child link="r_ai_dummy"/>
     <axis xyz="1 0 0"/>
