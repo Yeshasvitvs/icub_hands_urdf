@@ -190,7 +190,7 @@
     </link-->
 
     <!--LEFT HAND-->
-    <link name="l_hand_base_link">
+    <link name="l_hand">
       <inertial>
         <mass value="0.010"/>
         <origin xyz="0.07023 -0.00805 -0.007" rpy="0 0 0" />
@@ -382,7 +382,7 @@
 
     <joint name="l_tj2" type="revolute">
       <origin xyz="0.021 -0.0386 -0.01235" rpy="-3.063 1.07329 -1.5708"/>
-      <parent link="l_hand_base_link"/>
+      <parent link="l_hand"/>
       <child link="l_tl0"/>
       <axis xyz="-0.078511 -0.876064 0.47576"/>
       <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
@@ -491,7 +491,7 @@
 
     <joint name="l_aij6" type="revolute">
       <origin xyz="0.01225 -0.0643 -0.027" rpy="-1.4749 0.017507 -1.57079"/>
-      <parent link="l_hand_base_link"/>
+      <parent link="l_hand"/>
       <child link="l_ai_dummy"/>
       <axis xyz="-1 0 0"/>
       <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -600,7 +600,7 @@
 
     <joint name="l_mj6" type="revolute">
       <origin xyz="0.011 -0.0653 -0.01" rpy="-1.5708 7e-06 -1.57079"/>
-      <parent link="l_hand_base_link"/>
+      <parent link="l_hand"/>
       <child link="l_ml_dummy"/>
       <axis xyz="-1 0 0"/>
       <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -709,7 +709,7 @@
 
     <joint name="l_rij6" type="revolute">
       <origin xyz="0.01175 -0.06415 0.0059" rpy="-1.6581 -0.008693 -1.57079"/>
-      <parent link="l_hand_base_link"/>
+      <parent link="l_hand"/>
       <child link="l_ril_dummy"/>
       <axis xyz="1 0 0"/>
       <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -818,7 +818,7 @@
 
     <joint name="l_lij6" type="revolute">
       <origin xyz="0.0135 -0.06225 0.02475" rpy="-1.6581 -0.017493 -1.57079"/>
-      <parent link="l_hand_base_link"/>
+      <parent link="l_hand"/>
       <child link="l_li_dummy"/>
       <axis xyz="-1 0 0"/>
       <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -1301,7 +1301,7 @@
 
     <!--RIGHT HAND-->
 
-    <link name="r_hand_base_link">
+    <link name="r_hand">
       <origin xyz="0.016 -0.0625 0" rpy="1.5708 0 1.5708"/>
       <inertial>
         <mass value="0.010"/>
@@ -1495,7 +1495,7 @@
 
     <joint name="r_tj2" type="revolute">
       <origin xyz="0.021 -0.0386 0.01235" rpy="-0.078604 -1.07329 -1.57079"/>
-      <parent link="r_hand_base_link"/>
+      <parent link="r_hand"/>
       <child link="r_tl0"/>
       <axis xyz="0.078514 0.876064 0.47576"/>
       <limit effort="10" velocity="0.5" lower="0" upper="1.5708"/>
@@ -1604,7 +1604,7 @@
 
     <joint name="r_aij6" type="revolute">
       <origin xyz="0.01225 -0.0643 0.027" rpy="-1.6667 0.017507 -1.57079"/>
-      <parent link="r_hand_base_link"/>
+      <parent link="r_hand"/>
       <child link="r_ai_dummy"/>
       <axis xyz="1 0 0"/>
       <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -1713,7 +1713,7 @@
 
     <joint name="r_mj6" type="revolute">
       <origin xyz="0.011 -0.0653 0.01" rpy="-1.5708 7e-06 -1.57079"/>
-      <parent link="r_hand_base_link"/>
+      <parent link="r_hand"/>
       <child link="r_m_dummy"/>
       <axis xyz="1 0 0"/>
       <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -1822,7 +1822,7 @@
 
     <joint name="r_rij6" type="revolute">
       <origin xyz="0.01175 -0.06415 -0.0059" rpy="-1.4835 0.008707 -1.57079"/>
-      <parent link="r_hand_base_link"/>
+      <parent link="r_hand"/>
       <child link="r_rir_dummy"/>
       <axis xyz="1 0 0"/>
       <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -1931,7 +1931,7 @@
 
     <joint name="r_lij6" type="revolute">
       <origin xyz="0.0135 -0.06225 -0.02475" rpy="-1.4835 0.017507 -1.57079"/>
-      <parent link="r_hand_base_link"/>
+      <parent link="r_hand"/>
       <child link="r_li_dummy"/>
       <axis xyz="1 0 0"/>
       <limit effort="10" velocity="0.5" lower="-1.5708" upper="1.5708"/>
@@ -2432,14 +2432,14 @@
         <origin xyz="0 0 0" rpy="0 -0 0" />
         <axis xyz="0 0 1" />
         <parent link="l_wrist_1" />
-        <child link="l_hand_base_link" />
+        <child link="l_hand" />
         <dynamics damping="1" friction="0" />
         <limit effort="0.65" velocity="100" lower="-0.436332" upper="0.436332" />
     </joint>
     <joint name="l_hand_dh_frame_fixed_joint" type="fixed">
         <origin xyz="0 -0.04 0" rpy="0 -0 0" />
         <axis xyz="0 0 0" />
-        <parent link="l_hand_base_link" />
+        <parent link="l_hand" />
         <child link="l_hand_dh_frame" />
     </joint>
 
@@ -2613,14 +2613,14 @@
         <origin xyz="0 0 0" rpy="0 -0 3.14159" />
         <axis xyz="0 0 1" />
         <parent link="r_wrist_1" />
-        <child link="r_hand_base_link" />
+        <child link="r_hand" />
         <dynamics damping="1" friction="0" />
         <limit effort="0.65" velocity="100" lower="-0.436332" upper="0.436332" />
     </joint>
     <joint name="r_hand_dh_frame_fixed_joint" type="fixed">
         <origin xyz="0 -0.04 0" rpy="0 -0 0" />
         <axis xyz="0 0 0" />
-        <parent link="r_hand_base_link" />
+        <parent link="r_hand" />
         <child link="r_hand_dh_frame" />
     </joint>
 
