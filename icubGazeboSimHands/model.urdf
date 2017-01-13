@@ -939,14 +939,14 @@
                 <mesh filename="file:///home/yeshi/icub-gazebo/icub/meshes/collision/icub_simple_collision_l_hand.dae" scale="1 1 1" />
             </geometry>
         </collision>
-    </link>
+    </link-->
     <link name="l_hand_dh_frame">
         <inertial>
             <mass value="0" />
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
         </inertial>
-    </link-->
+    </link>
 
   <!--END OF LEFT HAND-->
 
@@ -1699,12 +1699,12 @@
         <dynamics damping="1" friction="0" />
         <limit effort="0.65" velocity="100" lower="-0.436332" upper="0.436332" />
     </joint>
-    <!--joint name="l_hand_dh_frame_fixed_joint" type="fixed">
-        <origin xyz="0.0625 0 -0.016" rpy="0 -0 0" />
+    <joint name="l_hand_dh_frame_fixed_joint" type="fixed">
+        <origin xyz="0 -0.04 0" rpy="0 -0 0" />
         <axis xyz="0 0 0" />
-        <parent link="l_hand" />
+        <parent link="l_hand_base_link" />
         <child link="l_hand_dh_frame" />
-    </joint-->
+    </joint>
 
     <!--END OF LEFT HAND-->
 
